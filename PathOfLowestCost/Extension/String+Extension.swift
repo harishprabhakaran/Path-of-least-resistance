@@ -33,8 +33,9 @@ extension String {
         rows = rows.filter { !($0.isEmpty) }
 
         for row in rows {
-            rowCount = rowCount == 0 ? row.count : rowCount
-            if rowCount == row.count {
+            let temRow = row.components(separatedBy: " ")
+            rowCount = rowCount == 0 ? temRow.count : rowCount
+            if rowCount == temRow.count {
                 if !(row.isEmpty || row == " "){
                     var columnArray = [Int]()
                     let column = row.components(separatedBy: " ")
