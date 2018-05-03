@@ -47,19 +47,19 @@ class InitialViewController: UIViewController {
     /// To calculate the lease cost, path with the given matrix
     func calculateLeastCost() {
         costCalculator = LeastCostCalculator()
-        let polc = costCalculator?.findPathOfLeastCost(inputArray: POLCMATRIX!)
+        let polc = costCalculator?.findLeastCost(inputMatrix: POLCMATRIX!)
         
         /// Display the output in alert.
         if ((polc?.cost) != nil) && ((polc?.path) != nil) {
             
-            let hasTravelled = (polc?.hasPathTravelledAllWay)! ? "YES" : "NO"
+            let isValid = (polc?.valid)! ? "YES" : "NO"
             let cost = "\(polc?.cost ?? 0)"
             let path = "\(polc?.path ?? [0])"
             
             self.resultView.isHidden = false
             self.costLabel.text = cost
             self.pathLabel.text = path
-            self.hasTravelledLabel.text = hasTravelled
+            self.hasTravelledLabel.text = isValid
         }
     }
 }

@@ -48,6 +48,7 @@ extension String {
                 }
             } else {
                 inputMatrix = [[Int]]()
+                return inputMatrix
             }
         }
         

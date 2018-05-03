@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LeastCostCalculator {
+class LeastCostCalculatorRecursive {
     
     var matrixArray = [[Int]]()
     var numberOfRows = 0

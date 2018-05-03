@@ -49,7 +49,7 @@ class MatrixInputTest: XCTestCase {
     
     func testMatrixWithEmptyRow() {
         let output = inputValidator.validateMatrix(with: matrixWithEmptyRow)
-        XCTAssertEqual([[1,2,3], [5,6,7]], output)
+        XCTAssertEqual([], output)
     }
     
     func testLengthMatrix() {
