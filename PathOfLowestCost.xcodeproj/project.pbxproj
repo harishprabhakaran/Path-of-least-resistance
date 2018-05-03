@@ -17,7 +17,7 @@
 		C648FE6B20934E9B007B09EF /* PathOfLowestCostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648FE6A20934E9B007B09EF /* PathOfLowestCostTests.swift */; };
 		C648FE7620934E9B007B09EF /* PathOfLowestCostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648FE7520934E9B007B09EF /* PathOfLowestCostUITests.swift */; };
 		C648FE8520934EEA007B09EF /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648FE8420934EEA007B09EF /* InitialViewController.swift */; };
-		C6726DE9209B3D62007B20D7 /* LeastCostCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6726DE8209B3D62007B20D7 /* LeastCostCalc.swift */; };
+		C6726DE9209B3D62007B20D7 /* LeastCostCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6726DE8209B3D62007B20D7 /* LeastCostCalculator.swift */; };
 		C6B2071520974E0900841B69 /* MatrixValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B2071420974E0900841B69 /* MatrixValidator.swift */; };
 		C6B2071820974F9100841B69 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B2071720974F9100841B69 /* String+Extension.swift */; };
 		C6B2071A209756B300841B69 /* MatrixInputTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B20719209756B300841B69 /* MatrixInputTest.swift */; };
@@ -57,7 +57,7 @@
 		C648FE7520934E9B007B09EF /* PathOfLowestCostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathOfLowestCostUITests.swift; sourceTree = "<group>"; };
 		C648FE7720934E9B007B09EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C648FE8420934EEA007B09EF /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		C6726DE8209B3D62007B20D7 /* LeastCostCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCostCalc.swift; sourceTree = "<group>"; };
+		C6726DE8209B3D62007B20D7 /* LeastCostCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCostCalculator.swift; sourceTree = "<group>"; };
 		C6B2071420974E0900841B69 /* MatrixValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixValidator.swift; sourceTree = "<group>"; };
 		C6B2071720974F9100841B69 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C6B20719209756B300841B69 /* MatrixInputTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInputTest.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			children = (
 				C62A2D9C209846A9006A1AF3 /* POLC.swift */,
 				C6281B4D20976D40001BD40A /* LeastCostCalculatorRecursive.swift */,
-				C6726DE8209B3D62007B20D7 /* LeastCostCalc.swift */,
+				C6726DE8209B3D62007B20D7 /* LeastCostCalculator.swift */,
 			);
 			path = "POLC Calculation";
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 				C648FE8520934EEA007B09EF /* InitialViewController.swift in Sources */,
 				C648FE5820934E9A007B09EF /* ViewController.swift in Sources */,
 				C648FE5620934E9A007B09EF /* AppDelegate.swift in Sources */,
-				C6726DE9209B3D62007B20D7 /* LeastCostCalc.swift in Sources */,
+				C6726DE9209B3D62007B20D7 /* LeastCostCalculator.swift in Sources */,
 				C62A2D9D209846A9006A1AF3 /* POLC.swift in Sources */,
 				C6B2071820974F9100841B69 /* String+Extension.swift in Sources */,
 				C6281B4E20976D40001BD40A /* LeastCostCalculatorRecursive.swift in Sources */,
