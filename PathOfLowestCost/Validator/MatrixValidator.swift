@@ -20,7 +20,7 @@ class MatrixValidator {
     ///
     /// - Parameter inputMatrixValue: input string
     /// - Returns: Array which contains array of int elements
-    func validateMatrix(with inputMatrixValue: String) -> [[Int]]{
+    func validateMatrix(with inputMatrixValue: String) -> (matrix: [[Int]], errorMessage: ErrorMessage) {
         self.inputMatrix = inputMatrixValue
         return inputMatrix.formMatrix()
     }

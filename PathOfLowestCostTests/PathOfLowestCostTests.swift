@@ -25,7 +25,9 @@ class PathOfLowestCostTests: XCTestCase {
     let matrixWithZeros =  [[0], [0], [0], [0], [0]]
     let longMatrix = [[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]]
     let nonNumericMatrix = [[5,4,"H"], [8,"M",7], [5,7,5]]
+    
     var costCalculator: LeastCostCalculator?
+    
     override func setUp() {
         super.setUp()
         costCalculator = LeastCostCalculator()
@@ -118,17 +120,14 @@ class PathOfLowestCostTests: XCTestCase {
         XCTAssertEqual(nodeTuple?.path, [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
     }
     
-    // Sample 14 : Single value matrix
+    // Sample 14: Single value matrix
     func testSingleValueMatrix() {
-        //let polc = costCalculator?.findPathOfLeastCost(inputArray: singleValue)
-        //XCTAssertEqual(1, polc?.cost!)
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: singleValue)
         XCTAssertEqual(nodeTuple?.cost, 1)
     }
     
+    // Sample: Test with only zeros
     func testWithZeroMatrix() {
-        //let polc = costCalculator?.findPathOfLeastCost(inputArray: matrixWithZeros)
-        //XCTAssertEqual(0, polc?.cost!)
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: matrixWithZeros)
         XCTAssertEqual(nodeTuple?.cost, 0)
     }

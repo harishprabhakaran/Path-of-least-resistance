@@ -34,13 +34,14 @@ class InitialViewController: UIViewController {
         let matrixValue = validator.validateMatrix(with: self.inputTextBox.text)
         
         //Show error if the matrix value is invalid
-        if matrixValue.count > 0 {
+        if matrixValue.matrix.count > 0 {
             self.errorLabel.isHidden = true
-            self.POLCMATRIX = matrixValue
+            self.POLCMATRIX = matrixValue.matrix
             self.calculateLeastCost()
         } else {
             self.resultView.isHidden = true
             self.errorLabel.isHidden = false
+            self.errorLabel.text = matrixValue.errorMessage.rawValue
         }
     }
     
@@ -49,12 +50,11 @@ class InitialViewController: UIViewController {
         costCalculator = LeastCostCalculator()
         let polc = costCalculator?.findLeastCost(inputMatrix: POLCMATRIX!)
         
-        /// Display the output in alert.
-        if ((polc?.cost) != nil) && ((polc?.path) != nil) {
-            
+        //Display the Cost, Path, Valid in Output box
+        if let costValue = polc?.cost, let pathValue = polc?.path {
             let isValid = (polc?.valid)! ? "YES" : "NO"
-            let cost = "\(polc?.cost ?? 0)"
-            let path = "\(polc?.path ?? [0])"
+            let cost = "\(costValue)"
+            let path = "\(pathValue)"
             
             self.resultView.isHidden = false
             self.costLabel.text = cost

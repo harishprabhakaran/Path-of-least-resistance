@@ -95,14 +95,17 @@ class LeastCostCalculator {
         var leftDiagonalDown = row + 1
         var leftDiagonalUp = row - 1
         
+        //If row is FIRST ROW (0) then take last row as ADJACENT
         if row == firstRow {
             leftDiagonalUp = lastRow
         }
         
+        //If row is LAST ROW then take first row as ADJACENT
         if row == lastRow {
             leftDiagonalDown = firstRow
         }
         
+        // To get the min value between 3 numbers.
         let downValue = matrix[leftDiagonalDown][col-1]
         let rightValue = matrix[row][col-1]
         let upValue = matrix[leftDiagonalUp][col-1]
@@ -111,6 +114,7 @@ class LeastCostCalculator {
         var mRow = leftDiagonalDown
         let mCol = col-1
         
+        //Minimum value calculation
         if minValue > upValue {
             minValue = upValue
             mRow = leftDiagonalUp
