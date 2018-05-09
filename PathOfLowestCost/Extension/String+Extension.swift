@@ -16,7 +16,6 @@ extension String {
     /// To check if the string contains any character other than numeric and whitespace and newlines
     /// - Returns: true or false based on condition
     var containsNonNumeric: Bool {
-        guard self.count > 0 else { return false }
         let acceptedCharacters = "0123456789\n "
         let filterCharacters = self.filter{ return !acceptedCharacters.contains($0) }
         return filterCharacters.count > 0
@@ -27,6 +26,8 @@ extension String {
     func formMatrix() -> MatrixOutput {
         var inputMatrix = [[Int]]()
         var rowCount = 0
+        
+        guard self.count > 0 else { return (matrix: inputMatrix, errorMessage: .EmptyErrorMessage) }
         
         //Check if the string has any non-numeric characters.
         guard !containsNonNumeric else {
