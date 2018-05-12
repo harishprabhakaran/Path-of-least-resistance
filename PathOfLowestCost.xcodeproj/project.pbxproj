@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6275DFC20A6AFA400880BB7 /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6275DFB20A6AFA400880BB7 /* StringExtensionTest.swift */; };
+		C6275DFE20A6C03900880BB7 /* ErrorMessageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6275DFD20A6C03900880BB7 /* ErrorMessageTest.swift */; };
 		C6281B4E20976D40001BD40A /* LeastCostCalculatorRecursive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6281B4D20976D40001BD40A /* LeastCostCalculatorRecursive.swift */; };
-		C62A2D9D209846A9006A1AF3 /* POLC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A2D9C209846A9006A1AF3 /* POLC.swift */; };
+		C62A2D9D209846A9006A1AF3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62A2D9C209846A9006A1AF3 /* Models.swift */; };
 		C648FE5620934E9A007B09EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648FE5520934E9A007B09EF /* AppDelegate.swift */; };
 		C648FE5B20934E9A007B09EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C648FE5920934E9A007B09EF /* Main.storyboard */; };
 		C648FE5D20934E9B007B09EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C648FE5C20934E9B007B09EF /* Assets.xcassets */; };
@@ -16,8 +18,11 @@
 		C648FE6B20934E9B007B09EF /* PathOfLowestCostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648FE6A20934E9B007B09EF /* PathOfLowestCostTests.swift */; };
 		C648FE7620934E9B007B09EF /* PathOfLowestCostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648FE7520934E9B007B09EF /* PathOfLowestCostUITests.swift */; };
 		C648FE8520934EEA007B09EF /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C648FE8420934EEA007B09EF /* InitialViewController.swift */; };
+		C655C99A20A5D41600F1FD7C /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C655C99920A5D41600F1FD7C /* View+Extension.swift */; };
 		C6726DE9209B3D62007B20D7 /* LeastCostCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6726DE8209B3D62007B20D7 /* LeastCostCalculator.swift */; };
 		C6726DEF20A19281007B20D7 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6726DEE20A19281007B20D7 /* ErrorMessage.swift */; };
+		C6726DF120A5B743007B20D7 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = C6726DF020A5B743007B20D7 /* reload.png */; };
+		C6726DF320A5C2A9007B20D7 /* exclamation.png in Resources */ = {isa = PBXBuildFile; fileRef = C6726DF220A5C2A8007B20D7 /* exclamation.png */; };
 		C6B2071520974E0900841B69 /* MatrixValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B2071420974E0900841B69 /* MatrixValidator.swift */; };
 		C6B2071820974F9100841B69 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B2071720974F9100841B69 /* String+Extension.swift */; };
 		C6B2071A209756B300841B69 /* MatrixInputTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B20719209756B300841B69 /* MatrixInputTest.swift */; };
@@ -41,8 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6275DFB20A6AFA400880BB7 /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
+		C6275DFD20A6C03900880BB7 /* ErrorMessageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageTest.swift; sourceTree = "<group>"; };
 		C6281B4D20976D40001BD40A /* LeastCostCalculatorRecursive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCostCalculatorRecursive.swift; sourceTree = "<group>"; };
-		C62A2D9C209846A9006A1AF3 /* POLC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POLC.swift; sourceTree = "<group>"; };
+		C62A2D9C209846A9006A1AF3 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C648FE5220934E9A007B09EF /* PathOfLowestCost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathOfLowestCost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C648FE5520934E9A007B09EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C648FE5A20934E9A007B09EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,8 +63,11 @@
 		C648FE7520934E9B007B09EF /* PathOfLowestCostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathOfLowestCostUITests.swift; sourceTree = "<group>"; };
 		C648FE7720934E9B007B09EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C648FE8420934EEA007B09EF /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		C655C99920A5D41600F1FD7C /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		C6726DE8209B3D62007B20D7 /* LeastCostCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastCostCalculator.swift; sourceTree = "<group>"; };
 		C6726DEE20A19281007B20D7 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		C6726DF020A5B743007B20D7 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		C6726DF220A5C2A8007B20D7 /* exclamation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exclamation.png; sourceTree = "<group>"; };
 		C6B2071420974E0900841B69 /* MatrixValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixValidator.swift; sourceTree = "<group>"; };
 		C6B2071720974F9100841B69 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C6B20719209756B300841B69 /* MatrixInputTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixInputTest.swift; sourceTree = "<group>"; };
@@ -88,14 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C6281B4C20976D28001BD40A /* POLC Calculation */ = {
+		C6281B4C20976D28001BD40A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C62A2D9C209846A9006A1AF3 /* POLC.swift */,
+				C62A2D9C209846A9006A1AF3 /* Models.swift */,
 				C6281B4D20976D40001BD40A /* LeastCostCalculatorRecursive.swift */,
 				C6726DE8209B3D62007B20D7 /* LeastCostCalculator.swift */,
 			);
-			path = "POLC Calculation";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		C648FE4920934E99007B09EF = {
@@ -121,15 +131,14 @@
 		C648FE5420934E9A007B09EF /* PathOfLowestCost */ = {
 			isa = PBXGroup;
 			children = (
-				C6281B4C20976D28001BD40A /* POLC Calculation */,
+				C6B2071320974DF100841B69 /* Common */,
 				C6B2071620974F4A00841B69 /* Extension */,
-				C6B2071320974DF100841B69 /* Validator */,
+				C6281B4C20976D28001BD40A /* Classes */,
 				C648FE8320934EBF007B09EF /* ViewController */,
-				C648FE5520934E9A007B09EF /* AppDelegate.swift */,
-				C648FE5920934E9A007B09EF /* Main.storyboard */,
-				C648FE5C20934E9B007B09EF /* Assets.xcassets */,
-				C648FE5E20934E9B007B09EF /* LaunchScreen.storyboard */,
+				C655C99C20A5D4B800F1FD7C /* Storyboards */,
+				C655C99D20A5D4DA00F1FD7C /* Supporting Files */,
 				C648FE6120934E9B007B09EF /* Info.plist */,
+				C648FE5C20934E9B007B09EF /* Assets.xcassets */,
 			);
 			path = PathOfLowestCost;
 			sourceTree = "<group>";
@@ -137,8 +146,10 @@
 		C648FE6920934E9B007B09EF /* PathOfLowestCostTests */ = {
 			isa = PBXGroup;
 			children = (
-				C648FE6A20934E9B007B09EF /* PathOfLowestCostTests.swift */,
+				C6275DFB20A6AFA400880BB7 /* StringExtensionTest.swift */,
+				C6275DFD20A6C03900880BB7 /* ErrorMessageTest.swift */,
 				C6B20719209756B300841B69 /* MatrixInputTest.swift */,
+				C648FE6A20934E9B007B09EF /* PathOfLowestCostTests.swift */,
 				C648FE6C20934E9B007B09EF /* Info.plist */,
 			);
 			path = PathOfLowestCostTests;
@@ -161,19 +172,39 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		C6B2071320974DF100841B69 /* Validator */ = {
+		C655C99C20A5D4B800F1FD7C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C648FE5920934E9A007B09EF /* Main.storyboard */,
+				C648FE5E20934E9B007B09EF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C655C99D20A5D4DA00F1FD7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C648FE5520934E9A007B09EF /* AppDelegate.swift */,
+				C6726DF220A5C2A8007B20D7 /* exclamation.png */,
+				C6726DF020A5B743007B20D7 /* reload.png */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6B2071320974DF100841B69 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				C6B2071420974E0900841B69 /* MatrixValidator.swift */,
 				C6726DEE20A19281007B20D7 /* ErrorMessage.swift */,
 			);
-			path = Validator;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		C6B2071620974F4A00841B69 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				C6B2071720974F9100841B69 /* String+Extension.swift */,
+				C655C99920A5D41600F1FD7C /* View+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -285,6 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6726DF320A5C2A9007B20D7 /* exclamation.png in Resources */,
+				C6726DF120A5B743007B20D7 /* reload.png in Resources */,
 				C648FE6020934E9B007B09EF /* LaunchScreen.storyboard in Resources */,
 				C648FE5D20934E9B007B09EF /* Assets.xcassets in Resources */,
 				C648FE5B20934E9A007B09EF /* Main.storyboard in Resources */,
@@ -316,9 +349,10 @@
 				C648FE5620934E9A007B09EF /* AppDelegate.swift in Sources */,
 				C6726DE9209B3D62007B20D7 /* LeastCostCalculator.swift in Sources */,
 				C6726DEF20A19281007B20D7 /* ErrorMessage.swift in Sources */,
-				C62A2D9D209846A9006A1AF3 /* POLC.swift in Sources */,
+				C62A2D9D209846A9006A1AF3 /* Models.swift in Sources */,
 				C6B2071820974F9100841B69 /* String+Extension.swift in Sources */,
 				C6281B4E20976D40001BD40A /* LeastCostCalculatorRecursive.swift in Sources */,
+				C655C99A20A5D41600F1FD7C /* View+Extension.swift in Sources */,
 				C6B2071520974E0900841B69 /* MatrixValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,8 +361,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6275DFE20A6C03900880BB7 /* ErrorMessageTest.swift in Sources */,
 				C648FE6B20934E9B007B09EF /* PathOfLowestCostTests.swift in Sources */,
 				C6B2071A209756B300841B69 /* MatrixInputTest.swift in Sources */,
+				C6275DFC20A6AFA400880BB7 /* StringExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,11 +531,12 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PathOfLowestCost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.PathOfLowestCost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -511,11 +548,12 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PathOfLowestCost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.PathOfLowestCost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -527,6 +565,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PathOfLowestCostTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.PathOfLowestCostTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,6 +582,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PathOfLowestCostTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.PathOfLowestCostTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -558,6 +598,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PathOfLowestCostUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.PathOfLowestCostUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -573,6 +614,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PathOfLowestCostUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.photon.PathOfLowestCostUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

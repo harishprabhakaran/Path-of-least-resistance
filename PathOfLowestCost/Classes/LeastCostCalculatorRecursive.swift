@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK:- To calculate the lease cost, path with the given matrix with Recursive Method
 class LeastCostCalculatorRecursive {
     
     var matrixArray = [[Int]]()
@@ -19,7 +20,7 @@ class LeastCostCalculatorRecursive {
     init() {
     }
     
-    /// To find the least cost with the matrix
+    //MARK: - To find the least cost with the matrix
     ///
     /// - Parameter inputArray: array to be parsed
     /// - Returns: POLC object
@@ -38,7 +39,7 @@ class LeastCostCalculatorRecursive {
         return leastPOLC
     }
     
-    /// Parsing the matrix with the diagonal up, horizontal right, diagonal down
+    //MARK: - Parsing the matrix with the diagonal up, horizontal right, diagonal down
     ///
     /// - Parameter row: row in the matrix
     /// - Parameter column: column in the matrix
@@ -73,7 +74,7 @@ class LeastCostCalculatorRecursive {
         
     }
     
-    /// Calculating the previous path value with the current value
+    //MARK: - Calculating the previous path value with the current value
     ///
     /// - Parameter row: row in the matrix
     /// - Parameter column: column in the matrix
@@ -86,7 +87,7 @@ class LeastCostCalculatorRecursive {
         return 0
     }
     
-    /// Travering to the diagonal top of the matrix
+    //MARK: - Travering to the diagonal top of the matrix
     ///
     /// - Parameter row: row in the matrix
     /// - Parameter column: column in the matrix
@@ -98,7 +99,7 @@ class LeastCostCalculatorRecursive {
         return (0,0)
     }
     
-    /// Travering to the diagonal bottom of the matrix
+    //MARK: - Travering to the diagonal bottom of the matrix
     ///
     /// - Parameter row: row in the matrix
     /// - Parameter column: column in the matrix
@@ -110,7 +111,7 @@ class LeastCostCalculatorRecursive {
         return (0,0)
     }
     
-    /// Travering to the adjacent right of the matrix
+    //MARK: - Travering to the adjacent right of the matrix
     ///
     /// - Parameter row: row in the matrix
     /// - Parameter column: column in the matrix
@@ -122,7 +123,7 @@ class LeastCostCalculatorRecursive {
         return (0,0)
     }
     
-    /// To find the minimum cost with the three values
+    //MARK: - To find the minimum cost with the three values
     ///
     /// - Parameter top: Diagonal top POLC object
     /// - Parameter bottom: Diagonal bottom POLC object
@@ -134,7 +135,7 @@ class LeastCostCalculatorRecursive {
         return minCost.first!
     }
     
-    /// To find the least cost and path
+    //MARK: - To find the least cost and path
     ///
     /// - Parameter listOfData: Array of POLC objects
     /// - Returns: POLC object

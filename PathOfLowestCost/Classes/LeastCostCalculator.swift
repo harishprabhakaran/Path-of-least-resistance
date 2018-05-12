@@ -10,7 +10,7 @@ import Foundation
 
 class LeastCostCalculator {
     
-    /// To find the least cost using the given matrix
+    //MARK:-  To find the least cost using the given matrix
     ///
     /// - Parameter inputMatrix: Array which contains array of Int elements
     /// - Returns: Tuple of Cost, Path and Valid status
@@ -83,7 +83,7 @@ class LeastCostCalculator {
         return (cost: leastCost, path: leastPath, valid: isValid)
     }
     
-    /// To get the minimum value between numbers
+    //MARK:- To get the minimum value between numbers
     ///
     /// - Parameter row: row in the matrix
     /// - Parameter column: column in the matrix

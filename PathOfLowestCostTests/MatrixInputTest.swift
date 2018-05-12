@@ -9,14 +9,14 @@
 import XCTest
 @testable import PathOfLowestCost
 
+/// Matrix Input Test Cases - Class to test all the possible positive input scenarios.
 class MatrixInputTest: XCTestCase {
-    
-    let invalidRowColumnMatrix = "1 2 3\n4 5 6\n7 8 9"
-    let matrixWithCharacters = "1 2 3\nr 5 6\n7 8 9"
-    let matrixWithEmptyRow = "1 2 3\n \n5 6 7\n\n\n"
-    let emptyMatrixValue = ""
-    let nonEqualRows = "1 2 3\n1 2"
-    let sample5X3Matrix = "19 10 19 10 19\n21 23 20 19 12\n20 12 20 11 10"
+
+    let sampleMatrix1 = "19 10 19 10 19\n21 23 20 19 12\n20 12 20 11 10"
+    let sampleMatrix2 = "1 2 3\n4 5 6\n7 8 9"
+    let sampleMatrix3 = "5\n8\n3\n5"
+    let sampleMatrix4 = "5 8 3 5"
+    let sampleMatrix5 = "5"
     
     var inputValidator: MatrixValidator!
     
@@ -26,44 +26,38 @@ class MatrixInputTest: XCTestCase {
         inputValidator = MatrixValidator()
     }
     
-    func testMinimumRowMatrixValidation() {
-        let output = inputValidator.validateMatrix(with: invalidRowColumnMatrix)
-        XCTAssertEqual([], output.matrix)
-        XCTAssertTrue(output.matrix.count == 0, output.errorMessage.rawValue)
+    //MARK:- Test Matrix Validation1
+    func testMatrixValidation1() {
+        let output = inputValidator.validateMatrix(with: sampleMatrix1)
+        XCTAssertTrue(output.matrix.count > 0)
+        XCTAssertEqual(output.errorMessage.rawValue, ErrorMessage.NoErrorMessage.rawValue)
     }
     
-    func testMinMaxRowColMatrixValidation() {
-        let output = inputValidator.validateMatrix(with: invalidRowColumnMatrix)
-        XCTAssertEqual([], output.matrix)
-        XCTAssertEqual("Please enter minimum of 1 row and 5 columns up to 10 rows and 100 columns", output.errorMessage.rawValue)
+    //MARK:- Test Matrix Validation2
+    func testMatrixValidation2() {
+        let output = inputValidator.validateMatrix(with: sampleMatrix2)
+        XCTAssertTrue(output.matrix.count > 0)
+        XCTAssertEqual(output.errorMessage.rawValue, ErrorMessage.NoErrorMessage.rawValue)
     }
     
-    func testEmptyMatrixValue() {
-        let output = inputValidator.validateMatrix(with: emptyMatrixValue)
-        XCTAssertEqual([], output.matrix)
-        XCTAssertEqual("Please enter Matrix Value", output.errorMessage.rawValue)
+    //MARK:- Test Matrix Validation3
+    func testMatrixValidation3() {
+        let output = inputValidator.validateMatrix(with: sampleMatrix3)
+        XCTAssertTrue(output.matrix.count > 0)
+        XCTAssertEqual(output.errorMessage.rawValue, ErrorMessage.NoErrorMessage.rawValue)
     }
     
-    func testMatrixWithCharacters() {
-        let output = inputValidator.validateMatrix(with: matrixWithCharacters)
-        XCTAssertEqual([], output.matrix)
-        XCTAssertEqual("Please enter only numeric values", output.errorMessage.rawValue)
+    //MARK:- Test Matrix Validation4
+    func testMatrixValidation4() {
+        let output = inputValidator.validateMatrix(with: sampleMatrix4)
+        XCTAssertTrue(output.matrix.count > 0)
+        XCTAssertEqual(output.errorMessage.rawValue, ErrorMessage.NoErrorMessage.rawValue)
     }
     
-    func testMatrixWithEmptyRow() {
-        let output = inputValidator.validateMatrix(with: matrixWithEmptyRow)
-        XCTAssertEqual([], output.matrix)
-    }
-    
-    func testNonEqualRows() {
-        let output = inputValidator.validateMatrix(with: nonEqualRows)
-        XCTAssertEqual([], output.matrix)
-        XCTAssertEqual("Please enter equal number of rows in matrix", output.errorMessage.rawValue)
-    }
-    
-    func testValidMatrix() {
-        let output = inputValidator.validateMatrix(with: sample5X3Matrix)
-        XCTAssertEqual([[19,10,19,10,19], [21,23,20,19,12], [20,12,20,11,10]], output.matrix)
-        XCTAssertEqual("", output.errorMessage.rawValue)
+    //MARK:- Test Matrix Validation5
+    func testMatrixValidation5() {
+        let output = inputValidator.validateMatrix(with: sampleMatrix5)
+        XCTAssertTrue(output.matrix.count > 0)
+        XCTAssertEqual(output.errorMessage.rawValue, ErrorMessage.NoErrorMessage.rawValue)
     }
 }

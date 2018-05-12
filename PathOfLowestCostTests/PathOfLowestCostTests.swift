@@ -9,6 +9,7 @@
 import XCTest
 @testable import PathOfLowestCost
 
+/// Path of lowest cost test - Class to test the different matrix format to find the path, cost.
 class PathOfLowestCostTests: XCTestCase {
     
     let sample5X6Matrix1 = [[3,4,1,2,8,6], [6,1,8,2,7,4], [5,9,3,9,9,5], [8,4,1,3,2,6], [3,7,2,8,6,4]]
@@ -37,99 +38,109 @@ class PathOfLowestCostTests: XCTestCase {
         super.tearDown()
     }
     
-    // Sample 1: (6X5 matrix normal flow)
+    //MARK: Test Sample 1: (6X5 matrix normal flow)
     func testSample5X6Matrix1() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: sample5X6Matrix1)
         XCTAssertEqual(nodeTuple?.cost, 16)
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 2: (6X5 matrix normal flow)
+    //MARK: Test Sample 2: (6X5 matrix normal flow)
     func testSample5X6Matrix2() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: sample5X6Matrix2)
         XCTAssertEqual(nodeTuple?.cost, 11)
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 3: (5X3 matrix with no path <50)
+    //MARK: Test Sample 3: (5X3 matrix with no path <50)
     func testSample5X3NoPath() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: sample5X3NoPath)
         XCTAssertEqual(nodeTuple?.cost, 48)
         XCTAssertEqual(nodeTuple?.valid, false)
+        XCTAssertFalse((nodeTuple?.valid)!)
     }
     
-    // Sample 4: (1X5 matrix)
+    //MARK: Test Sample 4: (1X5 matrix)
     func testSingleRowSingleColumnMatrix() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: singleRowColumnMatrix)
         XCTAssertEqual(nodeTuple?.cost, 26)
-        XCTAssertEqual(nodeTuple?.path, [1,1,1,1,1])
+        XCTAssertEqual((nodeTuple?.path)!, [1,1,1,1,1])
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 5: (5X1 matrix)
+    //MARK: Test Sample 5: (5X1 matrix)
     func testSingleColumnMultipleRowMatrix() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: singleColumnMultiRowMatrix)
         XCTAssertEqual(nodeTuple?.cost, 3)
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 7: (No input - Optional)
+    //MARK: Test Sample 7: (No input - Optional)
     func testWithEmptyMatrix() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: [[]])
         XCTAssertEqual(nodeTuple?.cost, 0)
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 8: (Starting with >50)
+    //MARK: Test Sample 8: (Starting with >50)
     func testMatrixStartingWith50() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: matrixStartingWith50)
         XCTAssertEqual(nodeTuple?.cost, 0)
-        XCTAssertEqual(nodeTuple?.path, [])
+        XCTAssertEqual((nodeTuple?.path)!, [])
+        XCTAssertFalse((nodeTuple?.valid)!)
     }
     
-    // Sample 9: (One value >50)
+    //MARK: Test Sample 9: (One value >50)
     func testMatrixOnevalueGreaterThan50() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: matrixOnevalueGreaterThan50)
         XCTAssertEqual(nodeTuple?.cost, 14)
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 10: (Negative values)
+    //MARK: Test Sample 10: (Negative values)
     func testWithNegativeMatrixValue() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: negativeMatrixValue)
         XCTAssertEqual(nodeTuple?.cost, 0)
-        XCTAssertEqual(nodeTuple?.path, [2,3,4,1])
-        XCTAssertEqual(nodeTuple?.valid, true)
+        XCTAssertEqual((nodeTuple?.path)!, [2,3,4,1])
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 11: Complete path vs. lower cost incomplete path
+    //MARK: Test Sample 11: Complete path vs. lower cost incomplete path
     func testMatrixWithCompletePath() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: matrixWithCompletePath)
         XCTAssertEqual(nodeTuple?.cost, 10)
-        XCTAssertEqual(nodeTuple?.path, [4,4])
-        XCTAssertEqual(nodeTuple?.valid, true)
-
+        XCTAssertEqual((nodeTuple?.path)!, [4,4])
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 12: Longer incomplete path vs. shorter lower cost incomplete path
+    //MARK: Test Sample 12: Longer incomplete path vs. shorter lower cost incomplete path
     func testMatrixWithInCompletePath() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: matrixWithInCompletePath)
         XCTAssertEqual(nodeTuple?.cost, 10)
-        XCTAssertEqual(nodeTuple?.path, [4,4])
-        XCTAssertEqual(nodeTuple?.valid, false)
+        XCTAssertEqual((nodeTuple?.path)!, [4,4])
+        XCTAssertFalse((nodeTuple?.valid)!)
     }
     
-    // Sample 13: Large number of columns
+    //MARK: Test Sample 13: Large number of columns
     func testWithLongMatrix() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: longMatrix)
         XCTAssertEqual(nodeTuple?.cost, 20)
-        XCTAssertEqual(nodeTuple?.path, [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+        XCTAssertEqual((nodeTuple?.path)!, [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample 14: Single value matrix
+    //MARK: Test Sample 14: Single value matrix
     func testSingleValueMatrix() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: singleValue)
         XCTAssertEqual(nodeTuple?.cost, 1)
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
-    // Sample: Test with only zeros
+    //MARK: Test Sample: Test with only zeros
     func testWithZeroMatrix() {
         let nodeTuple = costCalculator?.findLeastCost(inputMatrix: matrixWithZeros)
         XCTAssertEqual(nodeTuple?.cost, 0)
+        XCTAssertTrue((nodeTuple?.valid)!)
     }
     
 

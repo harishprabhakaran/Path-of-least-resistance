@@ -8,8 +8,10 @@
 
 import Foundation
 
+// MARK:- Path Of Least Cost Model
 struct POLC {
     var cost: Int?
     var path: [Int]?
     var hasPathTravelledAllWay: Bool?
 }
+

@@ -16,7 +16,7 @@ extension String {
     /// To check if the string contains any character other than numeric and whitespace and newlines
     /// - Returns: true or false based on condition
     var containsNonNumeric: Bool {
-        let acceptedCharacters = "0123456789\n "
+        let acceptedCharacters = "0123456789-1-2-3-4-5-6-7-8-9\n "
         let filterCharacters = self.filter{ return !acceptedCharacters.contains($0) }
         return filterCharacters.count > 0
     }
@@ -71,8 +71,13 @@ extension String {
     /// To validate the matrix to check the min and max number of rows and columns
     /// - Returns: true or false based on condition
     func validateMinMaxRowColumn(matrix: [[Int]]) -> Bool {
+        
+        guard matrix.count > 0 else {
+            return false
+        }
+        
         var isValidMatrix = true
-        let minCondition = matrix.count >= 1 && matrix[0].count >= 5
+        let minCondition = matrix.count >= 1 && matrix[0].count >= 1
         let maxCondition = matrix.count <= 10 && matrix[0].count <= 100
 
         //Validation: Minimum of 1 row and 5 columns up to 10 rows and 100 columns
